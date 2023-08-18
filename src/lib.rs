@@ -61,7 +61,7 @@ pub fn mock_grand_polys<F: Field, R: Rng>(
     let mut m: Vec<F> = Vec::with_capacity(table.len());
     while m.len() < table.len() {
         // sample mis to be small numbers 
-        let mut mi = rng.gen::<u8>();
+        let mi = rng.gen::<u8>();
         m.push(F::from(mi as u64));
     }
 

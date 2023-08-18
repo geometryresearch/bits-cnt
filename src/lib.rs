@@ -62,9 +62,6 @@ pub fn mock_grand_polys<F: Field, R: Rng>(
     while m.len() < table.len() {
         // sample mis to be small numbers 
         let mut mi = rng.gen::<u8>();
-        if mi == 0 {
-            mi += 1;
-        }
         m.push(F::from(mi as u64));
     }
 
